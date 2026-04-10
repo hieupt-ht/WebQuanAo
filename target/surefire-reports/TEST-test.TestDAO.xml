@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="test.TestDAO" time="0.025" tests="0" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="17"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/home/lekhachieu/Workspace/Nam3/LTM/WEBDOAO/target/test-classes:/home/lekhachieu/Workspace/Nam3/LTM/WEBDOAO/target/classes:/home/lekhachieu/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar:/home/lekhachieu/.m2/repository/javax/servlet/jsp/javax.servlet.jsp-api/2.3.3/javax.servlet.jsp-api-2.3.3.jar:/home/lekhachieu/.m2/repository/javax/servlet/jstl/1.2/jstl-1.2.jar:/home/lekhachieu/.m2/repository/com/microsoft/sqlserver/mssql-jdbc/12.4.2.jre11/mssql-jdbc-12.4.2.jre11.jar:/home/lekhachieu/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/home/lekhachieu/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/home/lekhachieu/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/home/lekhachieu/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/home/lekhachieu/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/home/lekhachieu/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/home/lekhachieu/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/home/lekhachieu/.m2/repository/org/apache/poi/poi-ooxml/5.2.3/poi-ooxml-5.2.3.jar:/home/lekhachieu/.m2/repository/org/apache/poi/poi-ooxml-lite/5.2.3/poi-ooxml-lite-5.2.3.jar:/home/lekhachieu/.m2/repository/org/apache/xmlbeans/xmlbeans/5.1.1/xmlbeans-5.1.1.jar:/home/lekhachieu/.m2/repository/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:/home/lekhachieu/.m2/repository/com/github/virtuald/curvesapi/1.07/curvesapi-1.07.jar:/home/lekhachieu/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:"/>
+    <property name="java.vm.vendor" value="Arch Linux"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://openjdk.java.net/"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="17"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk/lib"/>
+    <property name="sun.java.command" value="/home/lekhachieu/Workspace/Nam3/LTM/WEBDOAO/target/surefire/surefirebooter-20260410215747104_3.jar /home/lekhachieu/Workspace/Nam3/LTM/WEBDOAO/target/surefire 2026-04-10T21-57-46_957-jvmRun1 surefire-20260410215747104_1tmp surefire_0-20260410215747104_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/home/lekhachieu/Workspace/Nam3/LTM/WEBDOAO/target/test-classes:/home/lekhachieu/Workspace/Nam3/LTM/WEBDOAO/target/classes:/home/lekhachieu/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar:/home/lekhachieu/.m2/repository/javax/servlet/jsp/javax.servlet.jsp-api/2.3.3/javax.servlet.jsp-api-2.3.3.jar:/home/lekhachieu/.m2/repository/javax/servlet/jstl/1.2/jstl-1.2.jar:/home/lekhachieu/.m2/repository/com/microsoft/sqlserver/mssql-jdbc/12.4.2.jre11/mssql-jdbc-12.4.2.jre11.jar:/home/lekhachieu/.m2/repository/org/apache/poi/poi/5.2.3/poi-5.2.3.jar:/home/lekhachieu/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/home/lekhachieu/.m2/repository/org/apache/commons/commons-collections4/4.4/commons-collections4-4.4.jar:/home/lekhachieu/.m2/repository/org/apache/commons/commons-math3/3.6.1/commons-math3-3.6.1.jar:/home/lekhachieu/.m2/repository/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar:/home/lekhachieu/.m2/repository/com/zaxxer/SparseBitSet/1.2/SparseBitSet-1.2.jar:/home/lekhachieu/.m2/repository/org/apache/logging/log4j/log4j-api/2.18.0/log4j-api-2.18.0.jar:/home/lekhachieu/.m2/repository/org/apache/poi/poi-ooxml/5.2.3/poi-ooxml-5.2.3.jar:/home/lekhachieu/.m2/repository/org/apache/poi/poi-ooxml-lite/5.2.3/poi-ooxml-lite-5.2.3.jar:/home/lekhachieu/.m2/repository/org/apache/xmlbeans/xmlbeans/5.1.1/xmlbeans-5.1.1.jar:/home/lekhachieu/.m2/repository/org/apache/commons/commons-compress/1.21/commons-compress-1.21.jar:/home/lekhachieu/.m2/repository/com/github/virtuald/curvesapi/1.07/curvesapi-1.07.jar:/home/lekhachieu/.m2/repository/com/google/code/gson/gson/2.10.1/gson-2.10.1.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/home/lekhachieu"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2026-01-20"/>
+    <property name="java.home" value="/usr/lib/jvm/java-17-openjdk"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/home/lekhachieu/Workspace/Nam3/LTM/WEBDOAO"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/home/lekhachieu/Workspace/Nam3/LTM/WEBDOAO/target/surefire/surefirebooter-20260410215747104_3.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="17.0.18+8"/>
+    <property name="user.name" value="lekhachieu"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="6.12.68-1-lts"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/home/lekhachieu/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="17.0.18"/>
+    <property name="user.dir" value="/home/lekhachieu/Workspace/Nam3/LTM/WEBDOAO"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Arch Linux"/>
+    <property name="java.vm.version" value="17.0.18+8"/>
+    <property name="java.specification.maintenance.version" value="1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="61.0"/>
+  </properties>
+</testsuite>
