@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class ReportDAO {
 
@@ -79,5 +80,49 @@ public class ReportDAO {
             DBConnection.close(rs, ps, conn);
         }
         return list;
+    }
+
+    public Map<String, BigDecimal> getRevenueByMonth() {
+        Map<String, BigDecimal> map = new java.util.LinkedHashMap<>();
+        String sql = "SELECT FORMAT(created_at, 'yyyy-MM') as month_str, SUM(total_amount) as total_revenue " +
+                     "FROM orders WHERE status = 'COMPLETED' OR status = 'SHIPPING' " +
+                     "GROUP BY FORMAT(created_at, 'yyyy-MM') ORDER BY month_str ASC";
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
+            conn = DBConnection.getConnection();
+            ps = conn.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                map.put(rs.getString("month_str"), rs.getBigDecimal("total_revenue"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBConnection.close(rs, ps, conn);
+        }
+        return map;
+    }
+
+    public Map<String, Integer> getOrderStatusStats() {
+        Map<String, Integer> map = new java.util.LinkedHashMap<>();
+        String sql = "SELECT status, COUNT(id) as status_count FROM orders GROUP BY status";
+        Connection conn = null;
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        try {
+            conn = DBConnection.getConnection();
+            ps = conn.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                map.put(rs.getString("status"), rs.getInt("status_count"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            DBConnection.close(rs, ps, conn);
+        }
+        return map;
     }
 }

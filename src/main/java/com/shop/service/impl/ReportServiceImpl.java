@@ -8,6 +8,8 @@ import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import java.io.OutputStream;
 import java.util.List;
+import java.util.Map;
+import java.math.BigDecimal;
 
 public class ReportServiceImpl implements IReportService {
     private final ReportDAO reportDAO = new ReportDAO();
@@ -20,6 +22,16 @@ public class ReportServiceImpl implements IReportService {
     @Override
     public List<TopProductDTO> getTopSellingProducts(int limit) {
         return reportDAO.getTopSellingProducts(limit);
+    }
+
+    @Override
+    public Map<String, BigDecimal> getRevenueByMonth() {
+        return reportDAO.getRevenueByMonth();
+    }
+
+    @Override
+    public Map<String, Integer> getOrderStatusStats() {
+        return reportDAO.getOrderStatusStats();
     }
 
     @Override

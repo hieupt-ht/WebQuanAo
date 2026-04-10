@@ -15,6 +15,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
+import com.google.gson.Gson;
+import com.shop.dto.TopProductDTO;
 
 @WebServlet("/admin/dashboard")
 public class AdminController extends HttpServlet {
@@ -39,8 +42,16 @@ public class AdminController extends HttpServlet {
         // Tổng doanh thu
         request.setAttribute("totalRevenue", orderService.getTotalRevenue());
 
-        // Top sản phẩm bán chạy
-        request.setAttribute("topProducts", reportService.getTopSellingProducts(5));
+        Gson gson = new Gson();
+        
+        // Data for charts
+        request.setAttribute("revenueByMonthJson", gson.toJson(reportService.getRevenueByMonth()));
+        request.setAttribute("orderStatusStatsJson", gson.toJson(reportService.getOrderStatusStats()));
+        
+        // Top sản phẩm bán chạy (for both List and JSON)
+        List<TopProductDTO> topProducts = reportService.getTopSellingProducts(5);
+        request.setAttribute("topProducts", topProducts);
+        request.setAttribute("topProductsJson", gson.toJson(topProducts));
 
         request.getRequestDispatcher("/WEB-INF/views/admin/dashboard.jsp").forward(request, response);
     }
